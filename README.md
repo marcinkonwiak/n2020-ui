@@ -1,10 +1,12 @@
 # n2020
 
+[![n2020, a shadcn registry of square-cornered, dithered components built on Base UI](public/og.png)](https://ui.n2020.com)
+
 [![License: MIT](https://img.shields.io/badge/license-MIT-2b2bf5.svg)](LICENSE)
 
 A shadcn registry of square-cornered, dithered components for dashboards. The components use [Base UI](https://base-ui.com) and Tailwind CSS v4.
 
-Docs and live examples: [ui.n2020.com](https://ui.n2020.com).
+The docs and live examples are at [ui.n2020.com](https://ui.n2020.com).
 
 ## What is in it
 
@@ -67,7 +69,7 @@ pnpm dlx shadcn@latest add @n2020/stat @n2020/data-table
 | `registry/n2020/ui` | The shadcn components, restyled |
 | `registry/n2020/components` | Components that shadcn does not have |
 | `registry/n2020/blocks` | Whole pages built from the components. The site shows each block at `/view/<name>` |
-| `registry/n2020/hooks`, `registry/n2020/lib` | Shared hooks and utilities |
+| `registry/n2020/hooks`, `registry/n2020/lib` | The `use-mobile` hook and the `cn` utility. The registry does not publish them, because a shadcn project has its own copies |
 | `registry/n2020/examples` | Examples that the docs pages render. The registry does not publish them |
 | `registry/n2020/theme.css` | Tokens, fonts, and scrollbar styles |
 | `content/docs` | The docs pages |
@@ -76,7 +78,7 @@ pnpm dlx shadcn@latest add @n2020/stat @n2020/data-table
 
 ## Develop
 
-You need Node.js 22 and pnpm 10.
+You need Node.js 22.12 or later and pnpm 10.
 
 ```bash
 pnpm install
@@ -108,7 +110,7 @@ Do not run `pnpm shadcn add` for a component that the registry already has. The 
 
 1. Create the file in `registry/n2020/components`. Import other registry files through `@/registry/n2020/...`.
 2. Add an example and a docs page.
-3. Run `pnpm build`. The build adds the component to `registry.json` and reads its dependencies from its imports.
+3. Run `pnpm build`. The build adds the component to `registry.json` and reads its dependencies from its imports. It fails if a file calls a hook or passes an `on*` prop without `"use client";` at the top.
 
 ### Host your own copy
 
