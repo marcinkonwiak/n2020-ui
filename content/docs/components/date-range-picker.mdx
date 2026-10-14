@@ -1,0 +1,38 @@
+---
+title: Date Range Picker
+description: Preset range buttons and a calendar popover for a custom date and time range.
+---
+
+<ComponentPreview name="date-range-picker-demo" />
+
+## Installation
+
+<Install name="date-range-picker" />
+
+## Usage
+
+```tsx
+import {
+  DateRangePicker,
+  type DateRangeValue,
+} from "@/components/date-range-picker";
+```
+
+```tsx
+const [value, setValue] = useState<DateRangeValue>({
+  type: "preset",
+  preset: "7d",
+});
+
+<DateRangePicker value={value} onChange={setValue} />
+```
+
+The value is a preset or a custom range.
+
+```ts
+type DateRangeValue =
+  | { type: "preset"; preset: "24h" | "7d" | "30d" }
+  | { type: "custom"; from: Date; to: Date };
+```
+
+The component is controlled. It calls `onChange` when the user selects a preset or applies a custom range. A custom range must end in the past and span at most 366 days.

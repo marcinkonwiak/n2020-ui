@@ -1,0 +1,44 @@
+---
+title: Field
+description: Layout parts that combine a label, a control, help text, and an error message.
+---
+
+<ComponentPreview name="field-demo" />
+
+## Installation
+
+<Install name="field" />
+
+## Usage
+
+```tsx
+import {
+  Field,
+  FieldDescription,
+  FieldError,
+  FieldLabel,
+} from "@/components/ui/field";
+```
+
+```tsx
+<Field>
+  <FieldLabel htmlFor="name">Full name</FieldLabel>
+  <Input id="name" />
+  <FieldDescription>The courier sees this name.</FieldDescription>
+  <FieldError>Enter your full name.</FieldError>
+</Field>
+```
+
+## Examples
+
+### Invalid
+
+Set `data-invalid` on `Field` and `aria-invalid` on the control.
+
+<ComponentPreview name="field-invalid" />
+
+### Horizontal
+
+Set `orientation="horizontal"` to put the control beside its label. Wrap the label and the description in `FieldContent`.
+
+<ComponentPreview name="field-horizontal" />

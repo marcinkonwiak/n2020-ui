@@ -1,0 +1,38 @@
+---
+title: Tooltip
+description: A short label that appears when you hover or focus an element.
+---
+
+<ComponentPreview name="tooltip-demo" />
+
+## Installation
+
+<Install name="tooltip" />
+
+## Usage
+
+```tsx
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+```
+
+```tsx
+<TooltipProvider>
+  <Tooltip>
+    <TooltipTrigger render={<Button variant="outline" />}>Archive</TooltipTrigger>
+    <TooltipContent>Move this project to the archive</TooltipContent>
+  </Tooltip>
+</TooltipProvider>
+```
+
+`TooltipProvider` removes the open delay for the tooltips inside it. Put one at the root of your app.
+
+## Examples
+
+### Side
+
+<ComponentPreview name="tooltip-side" />

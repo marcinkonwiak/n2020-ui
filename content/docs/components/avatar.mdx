@@ -1,0 +1,39 @@
+---
+title: Avatar
+description: Displays an image that represents a user, with a fallback.
+---
+
+<ComponentPreview name="avatar-demo" />
+
+## Installation
+
+<Install name="avatar" />
+
+## Usage
+
+```tsx
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from "@/components/ui/avatar";
+```
+
+```tsx
+<Avatar>
+  <AvatarImage src="https://github.com/shadcn.png" alt="shadcn" />
+  <AvatarFallback>CN</AvatarFallback>
+</Avatar>
+```
+
+## Examples
+
+### Sizes
+
+<ComponentPreview name="avatar-sizes" />
+
+### Group
+
+`AvatarGroup` overlaps its avatars. `AvatarGroupCount` shows how many more exist.
+
+<ComponentPreview name="avatar-stack" />

@@ -1,0 +1,27 @@
+---
+title: Stat
+description: A tile with a label, a large number, an optional meter, and a caption.
+---
+
+<ComponentPreview name="stat-demo" />
+
+## Installation
+
+<Install name="stat" />
+
+## Usage
+
+```tsx
+import { Stat, StatGroup } from "@/components/stat";
+```
+
+```tsx
+<StatGroup>
+  <Stat label="Runs" value="12.4K" caption="Last 7 days" />
+  <Stat label="Failure rate" value="4.2%" caption="498 failed" meter={0.042} />
+</StatGroup>
+```
+
+`StatGroup` lays the tiles out in a grid and draws the lines between them. The grid has two columns at every width. To change the column count, pass a grid class in `className`, for example `xl:grid-cols-4`.
+
+`meter` is a ratio from 0 to 1.

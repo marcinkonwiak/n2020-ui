@@ -1,0 +1,30 @@
+---
+title: Calendar
+description: A month grid for picking a date or a date range.
+---
+
+<ComponentPreview name="calendar-demo" />
+
+## Installation
+
+<Install name="calendar" />
+
+## Usage
+
+```tsx
+import { Calendar } from "@/components/ui/calendar";
+```
+
+```tsx
+const [date, setDate] = React.useState<Date | undefined>(new Date());
+
+<Calendar mode="single" selected={date} onSelect={setDate} />
+```
+
+`Calendar` wraps [React DayPicker](https://daypicker.dev) and accepts its props.
+
+## Examples
+
+### Range
+
+<ComponentPreview name="calendar-range" />

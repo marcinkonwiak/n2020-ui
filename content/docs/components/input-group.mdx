@@ -1,0 +1,41 @@
+---
+title: Input Group
+description: An input or textarea with icons, text, or buttons attached to its edges.
+---
+
+<ComponentPreview name="input-group-demo" />
+
+## Installation
+
+<Install name="input-group" />
+
+## Usage
+
+```tsx
+import {
+  InputGroup,
+  InputGroupAddon,
+  InputGroupInput,
+} from "@/components/ui/input-group";
+```
+
+```tsx
+<InputGroup>
+  <InputGroupAddon>
+    <SearchIcon />
+  </InputGroupAddon>
+  <InputGroupInput placeholder="Search invoices" />
+</InputGroup>
+```
+
+The `align` prop of `InputGroupAddon` sets the edge: `inline-start`, `inline-end`, `block-start`, or `block-end`.
+
+## Examples
+
+### Button
+
+<ComponentPreview name="input-group-with-button" />
+
+### Textarea
+
+<ComponentPreview name="input-group-with-textarea" />

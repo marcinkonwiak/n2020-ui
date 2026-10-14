@@ -1,0 +1,34 @@
+---
+title: Data Table
+description: A table built on TanStack Table with a column visibility menu, a toolbar slot, and a footer slot.
+---
+
+<ComponentPreview name="data-table-demo" />
+
+## Installation
+
+<Install name="data-table" />
+
+## Usage
+
+```tsx
+import { createColumnHelper } from "@tanstack/react-table";
+import { DataTable, type dataTableFeatures } from "@/components/data-table";
+```
+
+```tsx
+const columnHelper = createColumnHelper<typeof dataTableFeatures, Member>();
+
+const columns = columnHelper.columns([
+  columnHelper.accessor("name", { header: "Name", enableHiding: false }),
+  columnHelper.accessor("email", { header: "Email" }),
+]);
+
+<DataTable columns={columns} data={members} />
+```
+
+`DataTable` renders the rows that you pass in `data`. It does not sort, filter, or paginate. Pass one page of rows, and put a [Data Table Pagination](/docs/components/data-table-pagination) in `footer`.
+
+Define the columns with `createColumnHelper` and the `dataTableFeatures` type. The **Columns** menu lists every column that does not set `enableHiding: false`. To keep the hidden columns across reloads, set `storageKey`.
+
+To fix the column widths, pass `columnWidths` with a width in pixels for every column id. The column named by `fillColumnId` takes the remaining space.

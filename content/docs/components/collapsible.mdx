@@ -1,0 +1,35 @@
+---
+title: Collapsible
+description: Shows and hides a panel of content.
+---
+
+<ComponentPreview name="collapsible-demo" />
+
+## Installation
+
+<Install name="collapsible" />
+
+## Usage
+
+```tsx
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+```
+
+```tsx
+<Collapsible>
+  <CollapsibleTrigger>Show variables</CollapsibleTrigger>
+  <CollapsibleContent>REDIS_URL</CollapsibleContent>
+</Collapsible>
+```
+
+To use another component as the trigger, pass it to the `render` prop.
+
+```tsx
+<CollapsibleTrigger render={<Button variant="ghost" />}>
+  Show variables
+</CollapsibleTrigger>
+```

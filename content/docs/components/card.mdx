@@ -1,0 +1,44 @@
+---
+title: Card
+description: Displays a container with a header, content, and a footer.
+---
+
+<ComponentPreview name="card-demo" />
+
+## Installation
+
+<Install name="card" />
+
+## Usage
+
+```tsx
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+```
+
+```tsx
+<Card>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+    <CardDescription>Description</CardDescription>
+    <CardAction>Action</CardAction>
+  </CardHeader>
+  <CardContent>Content</CardContent>
+  <CardFooter>Footer</CardFooter>
+</Card>
+```
+
+## Examples
+
+### Small
+
+Set `size="sm"` to reduce the spacing.
+
+<ComponentPreview name="card-small" />

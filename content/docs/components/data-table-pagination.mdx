@@ -1,0 +1,29 @@
+---
+title: Data Table Pagination
+description: Page controls for a table, with a row range, a page size select, and page buttons.
+---
+
+<ComponentPreview name="data-table-pagination-demo" />
+
+## Installation
+
+<Install name="data-table-pagination" />
+
+## Usage
+
+```tsx
+import { DataTablePagination } from "@/components/data-table-pagination";
+```
+
+```tsx
+<DataTablePagination
+  page={page}
+  pageSize={pageSize}
+  total={128}
+  itemName="invoices"
+  onPageChange={setPage}
+  onPageSizeChange={setPageSize}
+/>
+```
+
+The component is controlled. `page` starts at 1. The page size is one of 10, 20, 30, 40, or 50. Reset `page` to 1 when the page size changes.

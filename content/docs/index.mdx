@@ -1,0 +1,52 @@
+---
+title: Installation
+description: Set up a project and install n2020 components with the shadcn CLI.
+---
+
+## Requirements
+
+- A React project with Tailwind CSS v4.
+- shadcn initialised with the **Base UI** component library. n2020 does not support Radix.
+
+To create a project that meets these requirements, run the shadcn `init` command:
+
+```bash
+pnpm dlx shadcn@latest init -b base
+```
+
+## Install the theme
+
+The components read their colours, fonts, and radius from the theme. Install the theme before you install a component.
+
+<Install name="theme" />
+
+The command adds the tokens to your global stylesheet and installs the font packages.
+
+| Token | Value | Use |
+| --- | --- | --- |
+| `--radius` | `0` | Every component has square corners |
+| `--font-sans` | Geist | Body text and controls |
+| `--font-mono` | Geist Mono | Labels, code, and sidebar items |
+| `--font-display` | Instrument Serif | Page titles and big numbers |
+
+Dark mode applies when an ancestor element has the `dark` class.
+
+## Install a component
+
+Each component page shows its install command. For example, to install the button:
+
+<Install name="button" />
+
+The CLI writes the component to your `components/ui` directory and installs its dependencies, which include the other n2020 components that it uses.
+
+## Use a component
+
+Import the component from your project:
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+export function Example() {
+  return <Button variant="outline">Save</Button>;
+}
+```

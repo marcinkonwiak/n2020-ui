@@ -1,0 +1,49 @@
+---
+title: Dither
+description: Ordered-dither SVG patterns, a meter, and a WebGL canvas for dithered shaders.
+---
+
+<ComponentPreview name="dither-demo" />
+
+## Installation
+
+<Install name="dither" />
+
+## Usage
+
+```tsx
+import { DitherPattern } from "@/components/dither";
+```
+
+```tsx
+<svg width={120} height={40}>
+  <defs>
+    <DitherPattern id="half" color="currentColor" density={0.5} />
+  </defs>
+  <rect width={120} height={40} fill="url(#half)" />
+</svg>
+```
+
+## Examples
+
+### Pattern
+
+`DitherPattern` is an SVG `<pattern>` with a uniform dot density from 0 to 1. Put it in `<defs>` and reference its `id` as a fill. Use it to tell a second series apart from a solid one without a second colour. The preview at the top of the page fills the cache write bars with it.
+
+### Gradient pattern
+
+`DitherGradientPattern` fades the density from `topDensity` to `bottomDensity` over `height` pixels. Use it as the fill of an area chart. Set `height` to the height of the plot area.
+
+<ComponentPreview name="dither-gradient" />
+
+### Meter
+
+`DitherMeter` is a bar that shows a ratio from 0 to 1. The filled part is solid and the rest is dithered. The meter takes its colour from the text colour.
+
+<ComponentPreview name="dither-meter" />
+
+### Canvas
+
+`DitherCanvas` runs a WebGL fragment shader at a low resolution and scales it up with hard pixels. The shader gets `u_resolution`, `u_time`, and `u_px`, and the helpers `fbm`, `noise`, and `bayer8`. Pass your own uniforms as numbers or as arrays of two or three numbers. [Sky](/docs/components/sky) is built on it.
+
+<ComponentPreview name="dither-canvas" />

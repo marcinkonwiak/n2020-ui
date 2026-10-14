@@ -1,0 +1,32 @@
+---
+title: Page Header
+description: A page title with an eyebrow line and an actions slot over a Sky background.
+---
+
+<ComponentPreview name="page-header-demo" />
+
+## Installation
+
+<Install name="page-header" />
+
+## Usage
+
+```tsx
+import { PageHeader } from "@/components/page-header";
+```
+
+```tsx
+<PageHeader
+  title="Projects"
+  eyebrow="Acme Inc"
+  actions={<Button size="sm">New project</Button>}
+/>
+```
+
+## Examples
+
+### Compact
+
+Set `compact` to reduce the title size and the top padding.
+
+<ComponentPreview name="page-header-compact" />

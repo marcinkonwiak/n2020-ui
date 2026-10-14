@@ -1,0 +1,51 @@
+---
+title: Sidebar
+description: Displays the navigation of an application in a panel at the side of the page.
+---
+
+<ComponentPreview name="sidebar-demo" />
+
+## Installation
+
+<Install name="sidebar" />
+
+## Usage
+
+```tsx
+import {
+  Sidebar,
+  SidebarContent,
+  SidebarGroup,
+  SidebarGroupLabel,
+  SidebarInset,
+  SidebarMenu,
+  SidebarMenuButton,
+  SidebarMenuItem,
+  SidebarProvider,
+  SidebarTrigger,
+} from "@/components/ui/sidebar";
+```
+
+```tsx
+<SidebarProvider>
+  <Sidebar>
+    <SidebarContent>
+      <SidebarGroup>
+        <SidebarGroupLabel>Project</SidebarGroupLabel>
+        <SidebarMenu>
+          <SidebarMenuItem>
+            <SidebarMenuButton isActive>Services</SidebarMenuButton>
+          </SidebarMenuItem>
+        </SidebarMenu>
+      </SidebarGroup>
+    </SidebarContent>
+  </Sidebar>
+  <SidebarInset>
+    <SidebarTrigger />
+  </SidebarInset>
+</SidebarProvider>
+```
+
+`SidebarProvider` fills the height of the viewport. The sidebar is fixed to the edge of the viewport and collapses off the canvas. On a narrow screen it opens in a sheet.
+
+Set `collapsible="icon"` to collapse the sidebar to a column of icons. Set `collapsible="none"` to keep the sidebar in the page flow, as the preview on this page does.

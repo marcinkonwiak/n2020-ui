@@ -1,0 +1,24 @@
+---
+title: Chart Card
+description: A card with a title and a description above a chart.
+---
+
+<ComponentPreview name="chart-card-demo" />
+
+## Installation
+
+<Install name="chart-card" />
+
+## Usage
+
+```tsx
+import { ChartCard } from "@/components/chart-card";
+```
+
+```tsx
+<ChartCard title="Runs over time" description="Completed and failed runs per day">
+  <ChartContainer config={config} className="h-64 w-full">
+    <BarChart data={data}>...</BarChart>
+  </ChartContainer>
+</ChartCard>
+```

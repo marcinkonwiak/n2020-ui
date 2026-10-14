@@ -1,0 +1,45 @@
+---
+title: Sheet
+description: A panel that slides in from an edge of the screen.
+---
+
+<ComponentPreview name="sheet-demo" />
+
+## Installation
+
+<Install name="sheet" />
+
+## Usage
+
+```tsx
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+```
+
+```tsx
+<Sheet>
+  <SheetTrigger render={<Button variant="outline" />}>Open</SheetTrigger>
+  <SheetContent>
+    <SheetHeader>
+      <SheetTitle>Edit profile</SheetTitle>
+      <SheetDescription>
+        Your teammates see this name next to your comments.
+      </SheetDescription>
+    </SheetHeader>
+  </SheetContent>
+</Sheet>
+```
+
+## Examples
+
+### Side
+
+The `side` prop of `SheetContent` sets the edge. The default is `right`.
+
+<ComponentPreview name="sheet-side" />

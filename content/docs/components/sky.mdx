@@ -1,0 +1,26 @@
+---
+title: Sky
+description: An animated WebGL background of dithered clouds.
+---
+
+<ComponentPreview name="sky-demo" />
+
+## Installation
+
+<Install name="sky" />
+
+## Usage
+
+```tsx
+import { Sky } from "@/components/sky";
+```
+
+```tsx
+<div className="relative isolate h-64">
+  <Sky className="absolute inset-0 -z-10 size-full" />
+</div>
+```
+
+`Sky` renders a canvas with no size of its own. Give it a size with `className`, or stretch it over a positioned parent as shown above.
+
+`Sky` uses the dark palette inside an element with the `dark` class, which is the same rule as the theme's `dark:` variant. In all other places it uses the light palette. The palette changes when the class changes, so it follows `next-themes` and any toggle that sets `dark` on `<html>`. The animation stops when the user prefers reduced motion.

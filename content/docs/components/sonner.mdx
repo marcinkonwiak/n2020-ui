@@ -1,0 +1,35 @@
+---
+title: Sonner
+description: Displays a toast, a short message that appears over the page.
+---
+
+<ComponentPreview name="sonner-demo" />
+
+## Installation
+
+<Install name="sonner" />
+
+## Usage
+
+Render `Toaster` once, in the root layout of the application. It reads the theme from `next-themes`.
+
+```tsx
+import { toast } from "sonner";
+import { Toaster } from "@/components/ui/sonner";
+```
+
+```tsx
+<Toaster />
+```
+
+Call `toast` from anywhere to show a message.
+
+```tsx
+toast("Deploy started");
+```
+
+## Examples
+
+### Types
+
+<ComponentPreview name="sonner-types" />

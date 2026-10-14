@@ -1,0 +1,43 @@
+---
+title: Chart
+description: Displays data as a chart, built on Recharts.
+---
+
+<ComponentPreview name="chart-demo" />
+
+## Installation
+
+<Install name="chart" />
+
+## Usage
+
+```tsx
+import { Bar, BarChart } from "recharts";
+import {
+  type ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart";
+```
+
+```tsx
+const config = {
+  desktop: { label: "Desktop", color: "var(--chart-2)" },
+} satisfies ChartConfig;
+
+<ChartContainer config={config}>
+  <BarChart data={data}>
+    <ChartTooltip content={<ChartTooltipContent />} />
+    <Bar dataKey="desktop" fill="var(--color-desktop)" />
+  </BarChart>
+</ChartContainer>
+```
+
+The config gives each series a label and a colour. `ChartContainer` exposes each colour as a `--color-<key>` variable. The theme defines five chart colours, `--chart-1` to `--chart-5`.
+
+## Examples
+
+### Area
+
+<ComponentPreview name="chart-area" />

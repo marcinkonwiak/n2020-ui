@@ -1,0 +1,51 @@
+---
+title: Dropdown Menu
+description: A menu of actions that opens from a button.
+---
+
+<ComponentPreview name="dropdown-menu-demo" />
+
+## Installation
+
+<Install name="dropdown-menu" />
+
+## Usage
+
+```tsx
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+```
+
+```tsx
+<DropdownMenu>
+  <DropdownMenuTrigger render={<Button variant="outline" />}>Open</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuGroup>
+      <DropdownMenuLabel>Quarterly report</DropdownMenuLabel>
+      <DropdownMenuItem>Rename</DropdownMenuItem>
+      <DropdownMenuItem>Duplicate</DropdownMenuItem>
+    </DropdownMenuGroup>
+    <DropdownMenuSeparator />
+    <DropdownMenuItem variant="destructive">Delete</DropdownMenuItem>
+  </DropdownMenuContent>
+</DropdownMenu>
+```
+
+Put `DropdownMenuLabel` inside a `DropdownMenuGroup`. It labels that group.
+
+## Examples
+
+### Checkboxes
+
+<ComponentPreview name="dropdown-menu-checkboxes" />
+
+### Radio group
+
+<ComponentPreview name="dropdown-menu-radio" />

@@ -1,0 +1,51 @@
+---
+title: Breadcrumb
+description: Displays the path to the current page as a list of links.
+---
+
+<ComponentPreview name="breadcrumb-demo" />
+
+## Installation
+
+<Install name="breadcrumb" />
+
+## Usage
+
+```tsx
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+```
+
+```tsx
+<Breadcrumb>
+  <BreadcrumbList>
+    <BreadcrumbItem>
+      <BreadcrumbLink href="/">Home</BreadcrumbLink>
+    </BreadcrumbItem>
+    <BreadcrumbSeparator />
+    <BreadcrumbItem>
+      <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
+    </BreadcrumbItem>
+  </BreadcrumbList>
+</Breadcrumb>
+```
+
+To use the link component of your router, pass it to the `render` prop.
+
+```tsx
+<BreadcrumbLink render={<Link to="/" />}>Home</BreadcrumbLink>
+```
+
+## Examples
+
+### Custom separator
+
+Pass a child to `BreadcrumbSeparator` to replace the chevron.
+
+<ComponentPreview name="breadcrumb-custom-separator" />

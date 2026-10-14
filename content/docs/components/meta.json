@@ -1,0 +1,17 @@
+{
+  "title": "Components",
+  "defaultOpen": true,
+  "pages": [
+    "---n2020---",
+    "chart-card",
+    "data-table",
+    "data-table-pagination",
+    "date-range-picker",
+    "dither",
+    "page-header",
+    "sky",
+    "stat",
+    "---Base---",
+    "..."
+  ]
+}

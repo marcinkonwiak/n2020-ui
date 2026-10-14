@@ -1,0 +1,47 @@
+---
+title: Dialog
+description: A window that opens over the page and blocks the content behind it.
+---
+
+<ComponentPreview name="dialog-demo" />
+
+## Installation
+
+<Install name="dialog" />
+
+## Usage
+
+```tsx
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+```
+
+```tsx
+<Dialog>
+  <DialogTrigger render={<Button variant="outline" />}>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Rename project</DialogTitle>
+      <DialogDescription>
+        The new name appears in the sidebar.
+      </DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>
+```
+
+`DialogTrigger` and `DialogClose` take a `render` prop. They do not support `asChild`.
+
+## Examples
+
+### Close button in the footer
+
+Set `showCloseButton={false}` on `DialogContent` to hide the corner button. Set `showCloseButton` on `DialogFooter` to add a Close button there.
+
+<ComponentPreview name="dialog-close-button" />

@@ -1,0 +1,44 @@
+---
+title: Command
+description: A searchable list of commands that you filter by typing.
+---
+
+<ComponentPreview name="command-demo" />
+
+## Installation
+
+<Install name="command" />
+
+## Usage
+
+```tsx
+import {
+  Command,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+} from "@/components/ui/command";
+```
+
+```tsx
+<Command>
+  <CommandInput placeholder="Type a command or search" />
+  <CommandList>
+    <CommandEmpty>No results found.</CommandEmpty>
+    <CommandGroup heading="Suggestions">
+      <CommandItem>Open calendar</CommandItem>
+      <CommandItem>Invite a teammate</CommandItem>
+    </CommandGroup>
+  </CommandList>
+</Command>
+```
+
+## Examples
+
+### Dialog
+
+`CommandDialog` shows the command list in a dialog. Control it with `open` and `onOpenChange`.
+
+<ComponentPreview name="command-palette" />

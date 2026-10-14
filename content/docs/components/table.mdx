@@ -1,0 +1,42 @@
+---
+title: Table
+description: Displays rows of data in columns.
+---
+
+<ComponentPreview name="table-demo" />
+
+## Installation
+
+<Install name="table" />
+
+## Usage
+
+```tsx
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+```
+
+```tsx
+<Table>
+  <TableCaption>Invoices issued in March.</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Invoice</TableHead>
+      <TableHead>Amount</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>INV-0041</TableCell>
+      <TableCell>$250.00</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+```

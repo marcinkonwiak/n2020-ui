@@ -1,0 +1,47 @@
+---
+title: Drawer
+description: A panel that slides in from an edge of the screen and closes with a swipe.
+---
+
+<ComponentPreview name="drawer-demo" />
+
+## Installation
+
+<Install name="drawer" />
+
+## Usage
+
+```tsx
+import {
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+```
+
+```tsx
+<Drawer>
+  <DrawerTrigger render={<Button variant="outline" />}>Open</DrawerTrigger>
+  <DrawerContent>
+    <DrawerHeader>
+      <DrawerTitle>Cancel your subscription?</DrawerTitle>
+      <DrawerDescription>
+        Your plan stays active until 30 June.
+      </DrawerDescription>
+    </DrawerHeader>
+  </DrawerContent>
+</Drawer>
+```
+
+Set `showSwipeHandle` on `Drawer` to show a grab handle.
+
+## Examples
+
+### Side
+
+The `swipeDirection` prop of `Drawer` sets the edge and the swipe that closes the drawer. The default is `down`.
+
+<ComponentPreview name="drawer-side" />

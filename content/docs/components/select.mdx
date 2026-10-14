@@ -1,0 +1,52 @@
+---
+title: Select
+description: A button that opens a list of options and shows the chosen one.
+---
+
+<ComponentPreview name="select-demo" />
+
+## Installation
+
+<Install name="select" />
+
+## Usage
+
+```tsx
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+```
+
+```tsx
+const roles = [
+  { label: "Owner", value: "owner" },
+  { label: "Editor", value: "editor" },
+];
+
+<Select items={roles} defaultValue="editor">
+  <SelectTrigger>
+    <SelectValue />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectGroup>
+      <SelectItem value="owner">Owner</SelectItem>
+      <SelectItem value="editor">Editor</SelectItem>
+    </SelectGroup>
+  </SelectContent>
+</Select>
+```
+
+Pass `items` to `Select` so that `SelectValue` shows the label of the selected option. Without `items`, it shows the raw value.
+
+## Examples
+
+### Groups
+
+Put `SelectLabel` inside a `SelectGroup`. Use `SelectSeparator` between groups.
+
+<ComponentPreview name="select-groups" />
