@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "n2020",
+  "name": "n2020-ui",
   "main": "@tanstack/react-start/server-entry",
   "compatibility_date": "2026-10-04",
   "compatibility_flags": ["nodejs_compat"],
