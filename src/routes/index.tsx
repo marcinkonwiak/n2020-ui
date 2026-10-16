@@ -37,7 +37,7 @@ function Home() {
       <div className="hero dark relative isolate bg-background text-foreground">
         <GrainImage
           src={beagle}
-          className="absolute inset-y-0 right-0 -z-10 h-full w-full text-foreground/25 md:w-[72%] md:text-foreground"
+          className="absolute inset-y-0 right-0 -z-10 h-full w-full text-foreground/25 md:w-[min(72%,65.5rem)] md:text-foreground"
         />
         <header className="flex h-14 items-center gap-8 px-4 lg:px-10">
           <Link href="/" aria-label="n2020 home">
