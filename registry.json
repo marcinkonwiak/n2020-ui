@@ -884,6 +884,25 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "login",
+      "type": "registry:block",
+      "title": "Login",
+      "dependencies": [],
+      "registryDependencies": [
+        "https://ui.n2020.com/r/button.json",
+        "https://ui.n2020.com/r/field.json",
+        "https://ui.n2020.com/r/input.json",
+        "https://ui.n2020.com/r/sky.json",
+        "https://ui.n2020.com/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "registry/n2020/blocks/login.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
