@@ -12,7 +12,7 @@ The docs and live examples are at [ui.n2020.com](https://ui.n2020.com).
 
 - The shadcn components, restyled. They keep the shadcn props and exports, so code written for shadcn works with them.
 - Components that shadcn does not have: `chart-card`, `data-table`, `data-table-pagination`, `date-range-picker`, `dither`, `page-header`, `sky`, and `stat`.
-- Blocks, which are whole pages built from the components. The first block is a dashboard.
+- Blocks, which are whole pages built from the components. The blocks are a dashboard and a login page.
 - A theme with light and dark tokens, no rounded corners, and three fonts: Geist, Geist Mono, and Instrument Serif.
 - Docs that an agent can read. The site serves [`/llms.txt`](https://ui.n2020.com/llms.txt), and every docs page has a Markdown version at the same address with `.md` added.
 
